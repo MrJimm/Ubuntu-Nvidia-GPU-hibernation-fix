@@ -1,5 +1,6 @@
+#!/bin/sh
 TMP_PATH=/var/tmp
-TMPL_PATH=/home/glnb/missing-scripts
+TMPL_PATH="$(dirname "$0")"
 
 echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=${TMP_PATH}" | sudo tee /etc/modprobe.d/nvidia-power-management.conf 
 
